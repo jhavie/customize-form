@@ -1,0 +1,31 @@
+@mixin getflex($row: flex-start, $col: flex-start, $main: row) {
+  display: flex;
+  justify-content: $row;
+  flex-direction: $main;
+  align-items: $col;
+}
+
+@mixin getfull($h: 100%, $w: 100%) {
+  width: $w;
+  height: $h;
+}
+
+@mixin checkbox() {
+    margin-right: 0;
+    width: 16.66%;
+    &__label {
+        font-size: 12px;
+        width: calc(100% - 14px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+    &__inner {
+        width: 12px;
+        height: 12px;
+    }
+    &__input {
+        vertical-align: text-bottom;
+    }
+}
